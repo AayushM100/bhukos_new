@@ -36,11 +36,11 @@ web application/stitch/projects/12705068288408841835/screens/468e81e847434971970
 - **Archival Olive:** `#3F6212` / `#4D7C0F` — Secondary culinary taxonomy tags.
 
 ### Collectible Card Rarity Tiers (Restrained Archival Foils)
-- **Common (✦):** Charcoal letterpress ink on unbleached cardstock (`border-stone-300`, `bg-[#faf6ee]`, badge `#57534E`).
-- **Rare (✦✦):** Olive/sage vegetal tint (`border-emerald-700/30`, badge `#15803D`, background tint `#F0FDF4`).
-- **Epic (★★★):** Deep plum / crimson gilded archival border (`border-rose-900/30`, badge `#9F1239`, background tint `#FFF1F2`).
-- **Legendary (★★★★):** Warm gilded ochre / antique bronze hairline foil (`border-amber-700/50`, dual hairline frame, badge `#B45309`, background tint `#FFFBEB`).
-- **Masterpiece (✦✦✦✦✦):** Duotone acid-free prismatic foil seal (`border-stone-800` with subtle double-ruled gilded inner line, badge `#1C1917`).
+- **COMMON (✦):** Charcoal letterpress ink on unbleached cardstock (`border-stone-300`, `bg-[#faf6ee]`, badge `#57534E`).
+- **UNCOMMON (✦✦):** Olive/sage vegetal tint (`border-emerald-700/30`, badge `#15803D`, background tint `#F0FDF4`).
+- **RARE (★★★):** Deep plum / crimson gilded archival border (`border-rose-900/30`, badge `#9F1239`, background tint `#FFF1F2`).
+- **EPIC (★★★★):** Warm gilded ochre / antique bronze hairline foil (`border-amber-700/50`, dual hairline frame, badge `#B45309`, background tint `#FFFBEB`).
+- **LEGENDARY (✦✦✦✦✦):** Duotone acid-free prismatic foil seal (`border-stone-800` with subtle double-ruled gilded inner line, badge `#1C1917`).
 
 ---
 
