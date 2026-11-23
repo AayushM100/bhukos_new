@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: bhukos-db
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: bhukos
+      POSTGRES_PASSWORD: bhukos_dev_password
+      POSTGRES_DB: bhukos_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - bhukos_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U bhukos -d bhukos_db"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  bhukos_pgdata:
