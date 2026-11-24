@@ -40,3 +40,24 @@ export const apiRequest = async <T>(
 
   return response.json();
 };
+
+/**
+ * Sign in with Google OAuth
+ * @param idToken - Google ID token from @react-oauth/google
+ * @returns User object on success
+ */
+export const signInWithGoogle = async (idToken: string): Promise<{ user: any }> => {
+  return apiRequest<{ user: any }>('/auth/google', {
+    method: 'POST',
+    body: JSON.stringify({ idToken }),
+  });
+};
+
+/**
+ * Sign out the current user
+ */
+export const signOut = async (): Promise<void> => {
+  await apiRequest('/auth/logout', {
+    method: 'POST',
+  });
+};

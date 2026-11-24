@@ -22,6 +22,15 @@ export default {
         accent: '#D97706',
         olive: '#3F6212',
         'olive-primary': '#4D7C0F',
+
+        // Rarity Badge Colors (from design.md)
+        rarity: {
+          common: '#57534E',
+          uncommon: '#15803D',
+          rare: '#9F1239',
+          epic: '#B45309',
+          legendary: '#1C1917',
+        },
       },
       fontFamily: {
         display: ['Newsreader', 'Playfair Display', 'serif'],

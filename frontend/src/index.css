@@ -1,8 +1,9 @@
+/* Google Fonts - must come before Tailwind directives */
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
 
 /* Stitch Design System Base Styles */
 html {
@@ -49,12 +50,33 @@ p, li {
   border-radius: 4px;
 }
 
-/* Hairline dividers */
+/* Hairline dividers - using CSS gradient for crisp 1px border */
 .hairline {
-  @apply border-t border-solid border-stone-900/15;
+  border-top: 1px solid rgba(120, 113, 108, 0.15);
 }
 
 /* Rarity badge styles */
 .rarity-badge {
   @apply text-xs font-bold uppercase tracking-widest;
+}
+
+/* Rarity tier badges */
+.rarity-common {
+  @apply text-xs font-bold uppercase tracking-widest text-rarity-common;
+}
+
+.rarity-uncommon {
+  @apply text-xs font-bold uppercase tracking-widest text-rarity-uncommon;
+}
+
+.rarity-rare {
+  @apply text-xs font-bold uppercase tracking-widest text-rarity-rare;
+}
+
+.rarity-epic {
+  @apply text-xs font-bold uppercase tracking-widest text-rarity-epic;
+}
+
+.rarity-legendary {
+  @apply text-xs font-bold uppercase tracking-widest text-rarity-legendary;
 }
