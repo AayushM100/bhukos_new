@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+/* Stitch Design System Base Styles */
+html {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #FFF8F5;
+  color: #1C1917;
+  min-height: 100vh;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Newsreader', 'Playfair Display', serif;
+  font-weight: 500;
+  line-height: 1.2;
+  color: #1C1917;
+}
+
+p, li {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  color: #57534E;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF2EE;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D1D0C9;
+  border-radius: 4px;
+}
+
+/* Hairline dividers */
+.hairline {
+  @apply border-t border-solid border-stone-900/15;
+}
+
+/* Rarity badge styles */
+.rarity-badge {
+  @apply text-xs font-bold uppercase tracking-widest;
+}
