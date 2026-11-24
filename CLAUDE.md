@@ -5,7 +5,7 @@
 
 ### Tech Stack
 - **Backend:** Node.js, TypeScript, Fastify, Prisma ORM *(Note: If you chose Java 21 + Spring Boot, replace this line with Java 21, Spring Boot, Spring Data JPA, Flyway)*
-- **Database:** PostgreSQL / Supabase
+- **Database:** PostgreSQL (local Docker via infra/docker-compose.yml)
 - **Frontend:** React, TypeScript, Vite, Tailwind CSS, TanStack Query, React Hook Form + Zod, `qrcode.react`
 - **Auth:** Google OAuth 2.0 (HTTP-only session cookies)
 - **UI Design Authority:** `docs/ui/design.md` (Stitch Design System)
