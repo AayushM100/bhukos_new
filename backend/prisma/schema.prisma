@@ -20,3 +20,15 @@ model User {
 
   @@map("users")
 }
+
+model DailyFunFact {
+  id           String   @id @default(uuid())
+  factDate     DateTime @unique
+  title        String
+  summary      String
+  wikipediaUrl String
+  imageUrl     String?
+  fetchedAt    DateTime @default(now())
+
+  @@map("daily_fun_facts")
+}

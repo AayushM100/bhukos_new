@@ -10,12 +10,28 @@ const app = Fastify({
   },
 });
 
+// Register CORS plugin for cookie-based auth
+app.register(import('@fastify/cors'), {
+  origin: env.FRONTEND_URL,
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'PATCH', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+});
+
 // Register plugins
 app.register(authPlugin);
 
 // Register health route (public, no auth required) - at /health
 import { healthRoute } from './routes/v1/health.route';
 app.register(healthRoute);
+
+// Register auth routes
+import { authRoutes } from './modules/auth/routes';
+app.register(authRoutes);
+
+// Register facts routes
+import { factsRoutes } from './modules/facts/routes';
+app.register(factsRoutes);
 
 // Centralized error handler
 app.setErrorHandler<FastifyError>((error, request, reply) => {
