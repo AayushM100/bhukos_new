@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #faf6ee;">
+  <!-- Classic Potato Chips - COMMON rarity -->
+  <defs>
+    <linearGradient id="chipGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5deb3"/>
+      <stop offset="100%" stop-color="#deb887"/>
+    </linearGradient>
+    <pattern id="saltPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#f5f5dc"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - creamy parchment -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Chip bag - simple editorial style -->
+  <g transform="translate(200, 150)">
+    <!-- Bag body -->
+    <path d="M -120 -60 L -80 -80 L 80 -80 L 120 -60 L 100 0 L -100 0 Z" fill="#d2b48c"/>
+    <!-- Bag top -->
+    <rect x="-100" y="-60" width="200" height="10" fill="#c19a6b"/>
+    <!-- Bag seal -->
+    <rect x="-90" y="-55" width="180" height="4" fill="#a67c42"/>
+
+    <!-- Stack of chips -->
+    <path d="M -60 -30 Q -50 -20 -40 -30 L -40 -10 L -30 0 L -20 -10 L -20 10 L -10 0 L 0 -10 L 0 10 L 10 0 L 15 -10 L 25 0 L 35 -10 L 40 0" stroke="#d2b48c" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+    <!-- Seasoning dust -->
+    <circle cx="-70" cy="-20" r="2" fill="#f5deb3"/>
+    <circle cx="-50" cy="-25" r="1.5" fill="#f5deb3"/>
+    <circle cx="60" cy="-15" r="1.5" fill="#f5deb3"/>
+  </g>
+
+  <!-- Subtle paper texture -->
+  <rect width="400" height="300" fill="url(#saltPattern)" opacity="0.1"/>
+</svg>

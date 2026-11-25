@@ -6,10 +6,11 @@
    - `id` (UUID, PK), `google_id` (unique), `email` (unique), `username` (unique), `display_name`, `avatar_url`, `invite_code` (unique short token for QR/links), `created_at`
 
 2. **FoodCard (`food_cards`)**
-   - `id` (UUID, PK), `name`, `slug` (unique), `category` (SNACK, DRINK, DISH, DESSERT)
+   - `id` (UUID, PK), `name`, `slug` (unique), `category` (SNACK, DRINK)
    - `flavors` (text array / JSONB), `artwork_url`, `fun_quote`
    - `rarity` (ENUM: COMMON, UNCOMMON, RARE, EPIC, LEGENDARY)
-   - `avg_rating` (Decimal 3,2 - updated on log changes), `rating_count` (Int)
+   - `avg_rating` (Decimal 3,2 - serialized as number in API), `rating_count` (Int)
+   - Indexes on `slug`, `category`, `rarity`, and `name` for filtering performance
 
 3. **FoodLog (`food_logs`)**
    - `id` (UUID, PK), `user_id` (FK -> users), `card_id` (FK -> food_cards)

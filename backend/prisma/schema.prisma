@@ -21,6 +21,39 @@ model User {
   @@map("users")
 }
 
+enum Category {
+  SNACK
+  DRINK
+}
+
+enum Rarity {
+  COMMON
+  UNCOMMON
+  RARE
+  EPIC
+  LEGENDARY
+}
+
+model FoodCard {
+  id          String   @id @default(uuid())
+  name        String
+  slug        String   @unique
+  category    Category
+  flavors     String[] // JSONB/array of flavor tags
+  artworkUrl  String
+  funQuote    String
+  rarity      Rarity
+  avgRating   Decimal  @db.Decimal(3, 2) @default(0)
+  ratingCount Int      @default(0)
+  createdAt   DateTime @default(now())
+
+  @@map("food_cards")
+  @@index([slug])
+  @@index([category])
+  @@index([rarity])
+  @@index([name])
+}
+
 model DailyFunFact {
   id           String   @id @default(uuid())
   factDate     DateTime @unique

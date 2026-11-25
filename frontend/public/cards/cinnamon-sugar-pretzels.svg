@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fffbeb;">
+  <!-- Cinnamon Sugar Pretzels - RARE rarity -->
+  <defs>
+    <radialGradient id="pretzelBody" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5e0c3"/>
+      <stop offset="100%" stop-color="#e0c097"/>
+    </radialGradient>
+    <linearGradient id="cinnamon" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d2691e"/>
+      <stop offset="100%" stop-color="#cd853f"/>
+    </linearGradient>
+    <pattern id="sugarSparkle" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#fff3e0" opacity="0.6"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - light yellow tint for RARE -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Cinnamon Sugar Pretzels -->
+  <g transform="translate(200, 150)">
+    <!-- Serving dish -->
+    <ellipse cx="0" cy="0" rx="95" ry="35" fill="#fff" stroke="#e0d8d5" stroke-width="1.5"/>
+
+    <!-- Dish rim -->
+    <path d="M -95 0 L -85 -35 L 85 -35 L 95 0 Z" fill="#f5f5f5" stroke="#e0d8d5" stroke-width="1"/>
+
+    <!-- Pretzel twists -->
+    <g fill="url(#pretzelBody)" stroke="#d2b48c" stroke-width="0.5">
+      <!-- Pretzel 1 -->
+      <path d="M -45 -5 C -55 -15 -55 -25 -45 -30 C -35 -35 -25 -25 -25 -15 C -25 -5 -35 5 -45 0 Z"/>
+      <path d="M -40 -5 C -50 -15 -50 -25 -40 -30 C -30 -35 -20 -25 -20 -15 C -20 -5 -30 5 -40 0 Z" fill="#e8dcc9"/>
+
+      <!-- Pretzel 2 -->
+      <path d="M -15 5 C -25 10 -25 20 -15 25 C -5 30 5 20 5 10 C 5 0 -5 10 -15 5 Z"/>
+      <path d="M -10 5 C -20 10 -20 20 -10 25 C 0 30 10 20 10 10 C 10 0 0 10 -10 5 Z" fill="#e8dcc9"/>
+
+      <!-- Pretzel 3 -->
+      <path d="M 25 -5 C 35 -15 35 -25 25 -30 C 15 -35 5 -25 5 -15 C 5 -5 -5 5 -15 0 Z"/>
+      <path d="M 30 -5 C 40 -15 40 -25 30 -30 C 20 -35 10 -25 10 -15 C 10 -5 0 5 -10 0 Z" fill="#e8dcc9"/>
+
+      <!-- Pretzel 4 -->
+      <path d="M 55 5 C 45 10 45 20 55 25 C 65 30 75 20 75 10 C 75 0 65 10 55 5 Z"/>
+      <path d="M 50 5 C 40 10 40 20 50 25 C 60 30 70 20 70 10 C 70 0 60 10 50 5 Z" fill="#e8dcc9"/>
+    </g>
+
+    <!-- Cinnamon sugar coating -->
+    <g fill="url(#cinnamon)">
+      <ellipse cx="-40" cy="-2" rx="12" ry="8"/>
+      <ellipse cx="-10" cy="3" rx="10" ry="7"/>
+      <ellipse cx="35" cy="0" rx="12" ry="8"/>
+      <ellipse cx="55" cy="15" rx="8" ry="6"/>
+    </g>
+
+    <!-- Sugar crystals -->
+    <g fill="#fff3e0">
+      <circle cx="-45" cy="-10" r="1.5"/>
+      <circle cx="50" cy="8" r="1.2"/>
+      <circle cx="60" cy="5" r="1"/>
+    </g>
+
+    <!-- Cinnamon sticks -->
+    <g fill="#d2691e">
+      <path d="M -75 25 C -78 32 -80 35 -75 38 C -72 40 -68 42 -65 38 C -62 40 -58 42 -55 38 L -52 40" stroke="#8b4513" stroke-width="0.5"/>
+    </g>
+  </g>
+
+  <!-- Sugar sparkle overlay -->
+  <rect width="400" height="300" fill="url(#sugarSparkle)" opacity="0.1"/>
+</svg>

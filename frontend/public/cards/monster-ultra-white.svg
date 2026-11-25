@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fffbeb;">
+  <!-- Monster Energy Ultra Zero White - UNCOMMON rarity -->
+  <defs>
+    <radialGradient id="canBody" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#263238"/>
+      <stop offset="100%" stop-color="#37474f"/>
+    </radialGradient>
+    <linearGradient id="whiteLiquid" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#e3f2fd"/>
+      <stop offset="100%" stop-color="#bbdefb"/>
+    </linearGradient>
+    <linearGradient id="greenAccents" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#00c853"/>
+      <stop offset="100%" stop-color="#69f0ae"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - sage green tint for UNCOMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Monster Ultra Can -->
+  <g transform="translate(200, 150)">
+    <!-- Can body -->
+    <rect x="-45" y="-65" width="90" height="85" rx="2" fill="url(#canBody)"/>
+
+    <!-- Top rim -->
+    <path d="M -50 -70 L 50 -70 L 55 -65 L -55 -65 Z" fill="#263238"/>
+
+    <!-- Monster logo band -->
+    <rect x="-48" y="-60" width="96" height="12" fill="#fff"/>
+    <rect x="-46" y="-58" width="92" height="8" fill="#263238"/>
+
+    <text x="0" y="-52" font-family="Playfair Display, serif" font-size="6" fill="#212121" text-anchor="middle" font-weight="600">MONSTER</text>
+    <text x="0" y="-44" font-family="JetBrains Mono, monospace" font-size="5" fill="#fff" text-anchor="middle" font-weight="600">ULTRA</text>
+    <text x="0" y="-35" font-family="JetBrains Mono, monospace" font-size="7" fill="#00c853" text-anchor="middle" font-weight="700">WHITE</text>
+
+    <!-- Green lightning bolt -->
+    <g fill="#00c853">
+      <polygon points="0 10 -5 10 -2 0 0 5 2 0 8 10 8 0 -5 0"/>
+    </g>
+
+    <!-- Liquid waves - white/citrus -->
+    <path d="M -45 30 Q -30 25 -20 30 Q -10 25 0 30 Q 10 25 20 30 Q 30 25 45 30" fill="url(#whiteLiquid)" opacity="0.8"/>
+    <path d="M -40 35 Q -25 30 -15 35 Q -5 30 5 35 Q 15 30 25 35 Q 35 30 40 35" fill="url(#whiteLiquid)" opacity="0.5"/>
+
+    <!-- Green accents -->
+    <g fill="#69f0ae">
+      <circle cx="25" cy="20" r="2"/>
+      <circle cx="35" cy="35" r="1.5"/>
+    </g>
+
+    <!-- Zero sugar tag -->
+    <text x="20" y="8" font-family="JetBrains Mono, monospace" font-size="4" fill="#fff" text-anchor="middle" font-weight="700">ZERO</text>
+    <text x="25" y="11" font-family="JetBrains Mono, monospace" font-size="4" fill="#fff" text-anchor="middle" font-weight="600">SUGAR</text>
+  </g>
+
+  <!-- "Unleash The Beast" text -->
+  <text x="200" y="240" font-family="Playfair Display, serif" font-size="5" fill="#263238" text-anchor="middle" font-weight="500">Unleash The Beast</text>
+</svg>

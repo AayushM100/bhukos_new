@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Lay's Magic Masala - UNCOMMON rarity -->
+  <defs>
+    <pattern id="spiceSpeck" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#cd853f" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for UNCOMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Lay's Magic Masala Bag -->
+  <g transform="translate(200, 150)">
+    <!-- Bag body with orange/red and white -->
+    <path d="M -110 -65 L -70 -85 L 70 -85 L 110 -65 L 90 0 L -90 0 Z" fill="#f44336"/>
+
+    <!-- Bag top -->
+    <rect x="-90" y="-65" width="180" height="12" fill="#fff"/>
+    <rect x="-80" y="-62" width="160" height="6" fill="#f44336" rx="2"/>
+
+    <!-- Lay's logo band -->
+    <rect x="-75" y="-55" width="150" height="10" fill="#fff" rx="2"/>
+    <text x="0" y="-48" font-family="Playfair Display, serif" font-size="8" fill="#f44336" text-anchor="middle" font-weight="600">LAY'S</text>
+    <text x="0" y="-38" font-family="JetBrains Mono, monospace" font-size="7" fill="#57534e" text-anchor="middle" font-weight="500">INDIA'S MAGIC MASALA</text>
+
+    <!-- Chili peppers -->
+    <g fill="#d32f2f">
+      <path d="M -60 10 C -65 5 -70 15 -68 20 C -66 25 -60 22 -58 18"/>
+      <path d="M 50 15 C 55 10 60 20 58 25 C 56 30 50 27 48 23"/>
+    </g>
+
+    <!-- Spice particles -->
+    <g fill="#ff5722">
+      <circle cx="-70" cy="15" r="2"/>
+      <circle cx="65" cy="5" r="1.5"/>
+      <circle cx="25" cy="-5" r="2"/>
+    </g>
+
+    <!-- Chip texture -->
+    <g fill="#f5e0c3">
+      <ellipse cx="-40" cy="-20" rx="20" ry="15" transform="rotate(10)"/>
+      <ellipse cx="40" cy="-30" rx="18" ry="14" transform="rotate(-5)"/>
+    </g>
+  </g>
+
+  <!-- Spice pattern overlay -->
+  <rect width="400" height="300" fill="url(#spiceSpeck)" opacity="0.08"/>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Spicy Chili Doritos - UNCOMMON rarity -->
+  <defs>
+    <pattern id="doritoScale" patternUnits="userSpaceOnUse" width="8" height="8">
+      <path d="M4 0 L4 8" stroke="#db2b2b" stroke-width="1" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for UNCOMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+   <g transform="translate(200, 150)">
+    <!-- Bag -->
+    <path d="M -110 -65 L -70 -85 L 70 -85 L 110 -65 L 90 0 L -90 0 Z" fill="#f44336"/>
+
+    <!-- Bag top -->
+    <rect x="-90" y="-65" width="180" height="12" fill="#d32f2f" rx="2"/>
+
+    <!-- Flame accent -->
+    <path d="M 0 0 C -15 -20 -25 -10 -30 -5 C -35 0 -25 10 -20 5 C -15 10 -5 5 -2 0" fill="#ff6b35" opacity="0.8"/>
+    <path d="M 0 0 C -10 -15 -18 -8 -22 -2 C -26 4 -18 12 -12 6 C -6 10 2 5 5 0" fill="#ff3d00"/>
+
+    <!-- Dorito chip texture -->
+    <g fill="#ff5722">
+      <polygon points="0,-20 -15,-5 -15,0 0,5 15,0 15,-5" opacity="0.6"/>
+      <polygon points="-5,15 0,5 15,0 15,10 -5,20 -15,15" opacity="0.6"/>
+      <polygon points="-30,10 -15,0 -5,5 15,-5 25,0 10,15" opacity="0.6"/>
+    </g>
+
+    <!-- Chili peppers -->
+    <g fill="#d32f2f">
+      <path d="M 60 10 C 70 5 75 -10 60 -15 C 45 -20 40 -5 50 0 Z"/>
+      <path d="M 50 -5 C 58 -2 62 -12 55 -16 C 48 -20 42 -8 48 -3 Z"/>
+    </g>
+  </g>
+
+  <!-- Spice pattern overlay -->
+  <rect width="400" height="300" fill="url(#doritoScale)" opacity="0.08"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Amul Kool Kesar - RARE rarity -->
+  <defs>
+    <radialGradient id="milkGradient" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff3e0"/>
+      <stop offset="100%" stop-color="#ffe0b2"/>
+    </radialGradient>
+    <linearGradient id="kesarYellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd54f"/>
+      <stop offset="100%" stop-color="#ffca28"/>
+    </linearGradient>
+    <pattern id="cardamomSpeck" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#ff8f00" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for RARE -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Amul Kool Tetra Pack -->
+  <g transform="translate(200, 150)">
+    <!-- Tetra pack body -->
+    <path d="M -50 -60 L -35 -70 L 35 -70 L 50 -60 L 45 -55 L -45 -55 Z" fill="#fff3e0" stroke="#e0c097" stroke-width="1.5"/>
+
+    <!-- Top flap -->
+    <rect x="-40" y="-65" width="80" height="8" fill="#ffca28" rx="2"/>
+
+    <!-- Fold lines -->
+    <line x1="-45" y1="-60" x2="45" y2="-60" stroke="#e0c097" stroke-width="0.5" stroke-dasharray="2,2"/>
+
+    <!-- Amul logo -->
+    <g fill="#ff6600">
+      <circle cx="0" cy="-45" r="12"/>
+      <text x="0" y="-41" font-family="Playfair Display, serif" font-size="6" fill="#fff" text-anchor="middle" font-weight="700">A</text>
+    </g>
+
+    <!-- Product label -->
+    <rect x="-40" y="-35" width="80" height="18" fill="none" stroke="#ff6600" stroke-width="0.5" rx="2"/>
+    <rect x="-38" y="-33" width="76" height="14" fill="#fff" rx="1.5"/>
+
+    <text x="0" y="-28" font-family="JetBrains Mono, monospace" font-size="7" fill="#ff6600" text-anchor="middle" font-weight="600">AMUL KOOL</text>
+    <text x="0" y="-20" font-family="JetBrains Mono, monospace" font-size="6" fill="#ff8f00" text-anchor="middle" font-weight="700">KEsar</text>
+
+    <!-- Ice crystals -->
+    <g fill="#ffffff" opacity="0.7">
+      <ellipse cx="-25" cy="-15" rx="4" ry="2"/>
+      <ellipse cx="25" cy="-10" rx="3" ry="2"/>
+      <polygon points="0 10 -2 15 2 15 2 20 -2 20 -2 25 2 25 2 20 4 20"/>
+    </g>
+
+    <!-- Cardamom pods -->
+    <g fill="#ff8f00">
+      <path d="M 35 20 C 38 15 42 18 43 22 C 44 18 48 15 50 20"/>
+      <path d="M 15 25 C 18 20 22 23 23 27 C 24 23 28 20 30 25"/>
+    </g>
+
+    <!-- Milk swirl -->
+    <path d="M -45 30 C -35 35 -30 40 -20 38 C -15 42 -10 38 -5 40 C 0 38 5 40 10 38 C 15 40 20 35 30 38 C 35 36 40 40 45 38" fill="none" stroke="url(#milkGradient)" stroke-width="2" stroke-linecap="round"/>
+
+    <!-- Cinnamon stick -->
+    <g fill="#ff6600">
+      <path d="M -55 40 C -58 45 -60 48 -55 52 C -50 48 -52 45 -57 42 Z"/>
+    </g>
+  </g>
+
+  <!-- Cardamom speck overlay -->
+  <rect width="400" height="300" fill="url(#cardamomSpeck)" opacity="0.08"/>
+</svg>

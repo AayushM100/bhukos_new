@@ -33,6 +33,10 @@ app.register(authRoutes);
 import { factsRoutes } from './modules/facts/routes';
 app.register(factsRoutes);
 
+// Register cards routes
+import { cardsRoutes } from './modules/cards/routes';
+app.register(cardsRoutes);
+
 // Centralized error handler
 app.setErrorHandler<FastifyError>((error, request, reply) => {
   // Log the error (but not sensitive data in production)

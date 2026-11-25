@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Masala Peanuts - UNCOMMON rarity -->
+  <defs>
+    <radialGradient id="peanutBody" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#d2a679"/>
+      <stop offset="100%" stop-color="#b8865b"/>
+    </radialGradient>
+    <pattern id="spiceDust" patternUnits="userSpaceOnUse" width="6" height="6">
+      <circle cx="3" cy="3" r="1" fill="#cd853f" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for UNCOMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Peanut pack -->
+  <g transform="translate(200, 150)">
+    <!-- Pack body -->
+    <path d="M -90 -50 L -60 -70 L 60 -70 L 90 -50 L 80 0 L -80 0 Z" fill="#f5deb3" stroke="#d2b48c" stroke-width="2"/>
+
+    <!-- Pack top -->
+    <rect x="-75" y="-55" width="150" height="10" fill="#e0c097" rx="2"/>
+
+    <!-- Seal -->
+    <rect x="-65" y="-48" width="130" height="4" fill="#c19a6b"/>
+
+    <!-- Peanuts -->
+    <g fill="url(#peanutBody)">
+      <!-- Large peanuts -->
+      <ellipse cx="-40" cy="0" rx="22" ry="16" transform="rotate(-20)"/>
+      <ellipse cx="40" cy="0" rx="22" ry="16" transform="rotate(20)"/>
+
+      <!-- Medium peanuts -->
+      <ellipse cx="-65" cy="15" rx="16" ry="12" transform="rotate(10)"/>
+      <ellipse cx="65" cy="-15" rx="16" ry="12" transform="rotate(-10)"/>
+
+      <!-- Small peanuts -->
+      <ellipse cx="0" cy="25" rx="12" ry="9"/>
+    </g>
+
+    <!-- Spice coating on peanuts -->
+    <g fill="#cd853f">
+      <ellipse cx="-40" cy="0" rx="18" ry="12" fill-opacity="0.3"/>
+      <ellipse cx="40" cy="0" rx="18" ry="12" fill-opacity="0.3"/>
+    </g>
+
+    <!-- Masala spices -->
+    <g fill="#cd853f">
+      <circle cx="-70" cy="-20" r="8"/>
+      <circle cx="70" cy="-25" r="6"/>
+    </g>
+
+    <!-- Chili powder -->
+    <polygon fill="#d32f2f" points="-80,-5 -75,5 -65,-2 -55,5 -50,-10 -40,-2 -35,4 -25,-2 -15,2 -10,-5 -5,5 5,-5 10,5 15,-2 25,0 30,-5 35,3 45,-5 50,2 58,-5 62,3 72,-10 78,-5 82,5 88,-10 92,3 98,0"/>
+  </g>
+
+  <!-- Spice pattern overlay -->
+  <rect width="400" height="300" fill="url(#spiceDust)" opacity="0.1"/>
+</svg>

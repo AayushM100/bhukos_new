@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fff1f2;">
+  <!-- Cadbury Dairy Milk Silk Roast Almond - RARE rarity -->
+  <defs>
+    <linearGradient id="chocBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8d6e63"/>
+      <stop offset="100%" stop-color="#5d4037"/>
+    </linearGradient>
+    <linearGradient id="goldAccents" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#d4af37"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background - soft pink tint for RARE -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Cadbury Chocolate Bar -->
+  <g transform="translate(200, 150)">
+    <!-- Wrapper -->
+    <rect x="-80" y="-45" width="160" height="70" rx="4" fill="url(#chocBody)" stroke="#fff" stroke-width="2"/>
+
+    <!-- Gold foil accents -->
+    <rect x="-75" y="-40" width="150" height="5" fill="url(#goldAccents)"/>
+    <rect x="-75" y="30" width="150" height="5" fill="url(#goldAccents)"/>
+
+    <!-- Cadbury logo band -->
+    <rect x="-70" y="-35" width="140" height="12" fill="#fff"/>
+    <rect x="-68" y="-33" width="136" height="8" fill="#d4af37"/>
+
+    <text x="0" y="-26" font-family="Playfair Display, serif" font-size="8" fill="#8d6e63" text-anchor="middle" font-weight="600">CADBURY</text>
+    <text x="0" y="-18" font-family="JetBrains Mono, monospace" font-size="6" fill="#5d4037" text-anchor="middle" font-weight="600">DIARY MILK SILK</text>
+    <text x="0" y="-11" font-family="JetBrains Mono, monospace" font-size="7" fill="#ffd700" text-anchor="middle" font-weight="700">ROAST ALMOND</text>
+
+    <!-- Almonds on bar -->
+    <g fill="#d2a679">
+      <ellipse cx="-40" cy="0" rx="12" ry="8" transform="rotate(15)"/>
+      <ellipse cx="40" cy="5" rx="12" ry="8" transform="rotate(-10)"/>
+    </g>
+
+    <!-- Almond highlights -->
+    <g fill="#ffd700">
+      <ellipse cx="-40" cy="0" rx="5" ry="3"/>
+      <ellipse cx="40" cy="5" rx="4" ry="2"/>
+    </g>
+
+    <!-- Gold sparkles -->
+    <g fill="#ffd700">
+      <polygon points="0 25 -3 30 3 30 0 35 0 30 -3 25 3 25"/>
+      <circle cx="60" cy="20" r="2"/>
+    </g>
+  </g>
+
+  <!-- Subtle highlight on top -->
+  <ellipse cx="200" cy="90" rx="95" ry="12" fill="#ffffff" opacity="0.1"/>
+</svg>

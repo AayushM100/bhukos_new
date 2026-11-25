@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fffbeb;">
+  <!-- Sriracha Flame Roasted - EPIC rarity -->
+  <defs>
+    <linearGradient id="srirachaBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#d32f2f"/>
+      <stop offset="100%" stop-color="#f44336"/>
+    </linearGradient>
+    <radialGradient id="flameGrad" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ff5722"/>
+      <stop offset="100%" stop-color="#ff9800"/>
+    </radialGradient>
+    <pattern id="chiliSpeck" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#f44336"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - light yellow tint for EPIC -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Sriracha bottle -->
+  <g transform="translate(200, 150)">
+    <!-- Bottle body -->
+    <path d="M -35 -60 L -30 -70 L 30 -70 L 35 -60 L 25 -55 L -25 -55 Z" fill="#d32f2f" stroke="#b71c1c" stroke-width="1.5"/>
+
+    <!-- Neck -->
+    <rect x="-12" y="-70" width="24" height="10" fill="#b71c1c" rx="2"/>
+
+    <!-- Label -->
+    <rect x="-28" y="-52" width="56" height="18" fill="#fff" rx="2"/>
+    <text x="0" y="-35" font-family="JetBrains Mono, monospace" font-size="8" fill="#d32f2f" text-anchor="middle" font-weight="600">Huy Fong</text>
+    <text x="0" y="-25" font-family="JetBrains Mono, monospace" font-size="9" fill="#f44336" text-anchor="middle" font-weight="700">Sriracha</text>
+
+    <!-- Flame flames -->
+    <g fill="url(#flameGrad)">
+      <path d="M -50 -25 C -45 -35 -35 -40 -30 -35 C -25 -40 -15 -35 -10 -25 C -15 -30 -25 -40 -30 -45 C -35 -40 -45 -30 -50 -25 Z" transform="rotate(-20)"/>
+      <path d="M 0 0 C 5 -8 15 -8 20 0 C 15 -5 5 -5 0 0 Z" transform="rotate(10)"/>
+      <path d="M 50 -25 C 45 -35 35 -40 30 -35 C 25 -40 15 -35 10 -25 C 15 -30 25 -40 30 -45 C 35 -40 45 -30 50 -25 Z" transform="rotate(-5)"/>
+    </g>
+
+    <!-- Fire highlights -->
+    <g fill="#ffeb3b">
+      <circle cx="-30" cy="-35" r="4"/>
+      <circle cx="0" cy="-15" r="3"/>
+      <circle cx="30" cy="-35" r="4"/>
+    </g>
+
+    <!-- Chili peppers -->
+    <g fill="#d32f2f">
+      <path d="M -65 15 C -70 5 -75 10 -72 18 C -70 22 -65 25 -60 22 C -55 25 -50 22 -48 18 C -45 10 -50 5 -55 15 Z"/>
+      <path d="M 65 15 C 70 5 75 10 72 18 C 70 22 65 25 60 22 C 55 25 50 22 48 18 C 45 10 50 5 55 15 Z"/>
+    </g>
+
+    <!-- Roasting char marks -->
+    <g fill="none" stroke="#3e2723" stroke-width="1.5">
+      <path d="M -32 0 Q -35 -5 -38 -2"/>
+      <path d="M 32 0 Q 35 -5 38 -2"/>
+    </g>
+  </g>
+
+  <!-- Chili speck pattern -->
+  <rect width="400" height="300" fill="url(#chiliSpeck)" opacity="0.1"/>
+</svg>

@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Paper Boat Aamras - COMMON rarity -->
+  <defs>
+    <radialGradient id="mangoBody" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#fff9c4"/>
+      <stop offset="100%" stop-color="#ffeb3b"/>
+    </radialGradient>
+    <linearGradient id="liquidGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff176"/>
+      <stop offset="100%" stop-color="#ffca28"/>
+    </linearGradient>
+    <pattern id="mangoDrop" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#f57c00" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for COMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Paper Boat Aamras Pouch -->
+  <g transform="translate(200, 150)">
+    <!-- Pouch body - iconic Paper Boat shape -->
+    <path d="M -60 -70 L -50 -85 L 50 -85 L 60 -70 L 55 -65 L -55 -65 Z" fill="#4caf50"/>
+
+    <!-- Pouch top seal -->
+    <rect x="-45" y="-75" width="90" height="10" fill="#4caf50" rx="2"/>
+
+    <!-- Fold lines -->
+    <path d="M -55 -65 Q -50 -70 -45 -65 L -45 -60" stroke="#388e3c" stroke-width="1" fill="none"/>
+    <path d="M 55 -65 Q 50 -70 45 -65 L 45 -60" stroke="#388e3c" stroke-width="1" fill="none"/>
+
+    <!-- Paper Boat logo -->
+    <text x="0" y="-55" font-family="Playfair Display, serif" font-size="6" fill="#fff" text-anchor="middle" font-weight="600">PAPER BOAT</text>
+    <text x="0" y="-48" font-family="JetBrains Mono, monospace" font-size="5" fill="#c8e6c9" text-anchor="middle" font-weight="500">AAMRAS</text>
+
+    <!-- Mango chunks -->
+    <g fill="url(#mangoBody)">
+      <ellipse cx="-30" cy="-25" rx="12" ry="8" transform="rotate(15)"/>
+      <ellipse cx="30" cy="-30" rx="10" ry="7" transform="rotate(-10)"/>
+      <ellipse cx="0" cy="-15" rx="15" ry="10"/>
+    </g>
+
+    <!-- Juice swirl -->
+    <path d="M -45 -20 Q -35 -25 -25 -20 Q -15 -25 -5 -20 Q 5 -15 15 -20 Q 25 -25 35 -20" fill="url(#liquidGlow)" opacity="0.7"/>
+
+    <!-- Mango droplets -->
+    <g fill="#ffeb3b">
+      <ellipse cx="-40" cy="15" rx="4" ry="2"/>
+      <ellipse cx="35" cy="10" rx="3" ry="2"/>
+      <circle cx="0" cy="25" r="2"/>
+    </g>
+
+    <!-- Hand holding -->
+    <g fill="#e0c097">
+      <path d="M 50 30 Q 55 45 65 50 Q 70 55 75 50 Q 80 45 85 30"/>
+    </g>
+
+    <!-- Freshness tag -->
+    <rect x="-50" y="25" width="40" height="15" rx="3" fill="#4caf50"/>
+    <text x="-30" y="34" font-family="JetBrains Mono, monospace" font-size="5" fill="#fff" text-anchor="middle" font-weight="700">FRESH</text>
+  </g>
+
+  <!-- Juice splash effect -->
+  <path d="M 180 180 Q 175 170 185 160 Q 195 170 200 160 Q 205 170 215 160 Q 220 170 230 180" fill="#fff9c4" opacity="0.3"/>
+
+  <!-- Mango drop pattern -->
+  <rect width="400" height="300" fill="url(#mangoDrop)" opacity="0.08"/>
+</svg>

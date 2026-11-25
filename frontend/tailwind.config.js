@@ -12,6 +12,7 @@ export default {
 
         // Primary Ink / High Contrast
         onSurface: '#1C1917',
+        'on-surface': '#1C1917',
         'on-surface-variant': '#57534E',
         outline: '#78716C',
         'outline-secondary': '#A8A29E',

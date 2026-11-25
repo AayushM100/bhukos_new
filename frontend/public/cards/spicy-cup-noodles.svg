@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #faf6ee;">
+  <!-- Spicy Cup Noodles - COMMON rarity -->
+  <defs>
+    <radialGradient id="noodleBody" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5e0c3"/>
+      <stop offset="100%" stop-color="#e0c097"/>
+    </radialGradient>
+    <linearGradient id="broth" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fff3e0"/>
+      <stop offset="100%" stop-color="#ffecb3"/>
+    </linearGradient>
+    <pattern id="noodleOverlay" patternUnits="userSpaceOnUse" width="4" height="4">
+      <path d="M 2 0 L 2 4" stroke="#e0c097" stroke-width="0.5"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - creamy parchment for COMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Spicy Cup Noodles -->
+  <g transform="translate(200, 150)">
+    <!-- Cup body -->
+    <path d="M -50 -60 L -40 -75 L 40 -75 L 50 -60 L 45 -55 L -45 -55 Z" fill="#ffcdd2" stroke="#e57373" stroke-width="1.5"/>
+
+    <!-- Cup base -->
+    <path d="M -48 -55 L 48 -55 L 42 -45 L -42 -45 Z" fill="#ef9a9a"/>
+
+    <!-- Cup lid (cracked) -->
+    <path d="M -55 -75 L -45 -80 L 45 -80 L 55 -75" fill="#f5f5f5" stroke="#e0e0e0" stroke-width="1"/>
+    <rect x="-35" y="-82" width="70" height="6" fill="#e0e0e0"/>
+
+    <!-- Noodle bundles -->
+    <g fill="url(#noodleBody)">
+      <ellipse cx="-15" cy="-25" rx="25" ry="8" transform="rotate(10)"/>
+      <ellipse cx="15" cy="-35" rx="25" ry="8" transform="rotate(-5)"/>
+    </g>
+
+    <!-- Noodle texture -->
+    <g fill="#e0b080">
+      <path d="M -15 -25 C -20 -28 -22 -35 -18 -38 C -15 -40 -10 -38 -8 -35" stroke-width="1.5"/>
+      <path d="M 15 -35 C 20 -38 22 -45 18 -48 C 15 -50 10 -48 8 -45" stroke-width="1.5"/>
+    </g>
+
+    <!-- Broth -->
+    <path d="M -40 -10 L -30 0 L 30 0 L 40 -10" fill="url(#broth)" opacity="0.6"/>
+
+    <!-- Spice particles above -->
+    <g fill="#ff5722">
+      <circle cx="-30" cy="-65" r="2"/>
+      <circle cx="25" cy="-70" r="1.5"/>
+      <circle cx="10" cy="-55" r="1.5"/>
+    </g>
+
+    <!-- Chili peppers -->
+    <g fill="#d32f2f">
+      <path d="M -50 15 C -55 8 -58 15 -60 18 C -62 22 -58 28 -55 25"/>
+      <path d="M 50 15 C 55 8 58 15 60 18 C 62 22 58 28 55 25"/>
+    </g>
+
+    <!-- Steam lines -->
+    <g stroke="#ffcc80" stroke-width="1.5" opacity="0.8">
+      <path d="M 0 15 C -5 20 -8 15 -12 20"/>
+      <path d="M 0 20 C -3 25 0 25 3 20"/>
+      <path d="M 0 25 C 2 30 5 25 8 30"/>
+    </g>
+
+    <!-- Package details -->
+    <text x="0" y="-48" font-family="JetBrains Mono, monospace" font-size="6" fill="#d32f2f" text-anchor="middle" font-weight="600">YUMMY</text>
+  </g>
+
+  <!-- Noodle pattern overlay -->
+  <rect width="400" height="300" fill="url(#noodleOverlay)" opacity="0.05"/>
+</svg>

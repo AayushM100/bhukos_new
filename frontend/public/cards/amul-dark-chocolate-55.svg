@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fffbeb;">
+  <!-- Amul Dark Chocolate 55% - EPIC rarity -->
+  <defs>
+    <linearGradient id="darkChocGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3e2723"/>
+      <stop offset="100%" stop-color="#5d4037"/>
+    </linearGradient>
+    <radialGradient id="gloss" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background - light yellow tint for EPIC -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Amul Dark Chocolate Bar -->
+  <g transform="translate(200, 150)">
+    <!-- Wrapper -->
+    <rect x="-80" y="-45" width="160" height="70" rx="4" fill="url(#darkChocGrad)"/>
+
+    <!-- Gloss highlight -->
+    <ellipse cx="-20" cy="-25" rx="50" ry="15" fill="url(#gloss)"/>
+
+    <!-- Amul logo -->
+    <g fill="#ff6600">
+      <circle cx="0" cy="-35" r="10"/>
+      <text x="0" y="-31" font-family="Playfair Display, serif" font-size="7" fill="#212121" text-anchor="middle" font-weight="700">A</text>
+    </g>
+
+    <!-- Product label -->
+    <rect x="-55" y="-25" width="110" height="14" fill="#fff" rx="2"/>
+    <rect x="-53" y="-23" width="106" height="10" fill="#3e2723" rx="2"/>
+
+    <text x="0" y="-18" font-family="JetBrains Mono, monospace" font-size="6" fill="#fff" text-anchor="middle" font-weight="600">Amul</text>
+    <text x="0" y="-12" font-family="JetBrains Mono, monospace" font-size="7" fill="#ff6600" text-anchor="middle" font-weight="600">Dark 55%</text>
+
+    <!-- Cocoa nibs texture -->
+    <g fill="#1b2727">
+      <circle cx="-30" cy="10" r="2"/>
+      <circle cx="30" cy="5" r="2"/>
+      <circle cx="0" cy="20" r="1.5"/>
+    </g>
+
+    <!-- Cocoa nib highlights -->
+    <g fill="#ff6600">
+      <circle cx="-30" cy="10" r="1"/>
+      <circle cx="30" cy="5" r="1"/>
+    </g>
+
+    <!-- Percentage badge -->
+    <rect x="25" y="25" width="30" height="20" rx="3" fill="#ffd600" rx="3"/>
+    <text x="40" y="37" font-family="JetBrains Mono, monospace" font-size="7" fill="#212121" text-anchor="middle" font-weight="700">55%</text>
+  </g>
+
+  <!-- Dark chocolate swirl -->
+  <path d="M 180 180 C 175 170 185 160 190 170 C 195 160 205 170 200 180 C 195 190 185 195 180 190 C 175 195 165 190 170 180 Z" fill="#5d4037" opacity="0.3"/>
+</svg>

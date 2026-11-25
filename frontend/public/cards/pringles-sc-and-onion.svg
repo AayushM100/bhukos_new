@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fff1f2;">
+  <!-- Pringles Sour Cream & Onion - RARE rarity -->
+  <defs>
+    <linearGradient id="pringlesBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#f5f5f5"/>
+      <stop offset="100%" stop-color="#e0e0e0"/>
+    </linearGradient>
+    <radialGradient id="dipColor" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#f5f5dc"/>
+      <stop offset="100%" stop-color="#e0c097"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Background - soft pink tint for RARE -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Pringles Can -->
+  <g transform="translate(200, 150)">
+    <!-- Can body -->
+    <rect x="-45" y="-65" width="90" height="65" rx="2" fill="url(#pringlesBody)" stroke="#bdbdbd" stroke-width="1.5"/>
+
+    <!-- Top rim -->
+    <rect x="-50" y="-70" width="100" height="8" fill="#bdbdbd"/>
+
+    <!-- Pringles logo band -->
+    <rect x="-48" y="-62" width="96" height="12" fill="#fff" rx="2"/>
+    <rect x="-46" y="-60" width="92" height="8" fill="#ff9800"/>
+
+    <!-- Text on can -->
+    <text x="0" y="-52" font-family="Playfair Display, serif" font-size="7" fill="#212121" text-anchor="middle" font-weight="600">PRINGLES</text>
+    <text x="0" y="-44" font-family="JetBrains Mono, monospace" font-size="6" fill="#424242" text-anchor="middle" font-weight="500">SOUR CREAM & ONION</text>
+
+    <!-- Stack of Pringles -->
+    <g fill="#f5f5f5" stroke="#e0e0e0" stroke-width="0.5">
+      <path d="M -35 -40 L -25 -45 L -25 -35 L -20 -40 L -20 -30 L -25 -25 L -35 -25 L -35 -15 L -30 -10 L -20 -10 L -20 0 L -25 5 L -35 5 Z"/>
+      <path d="M -20 -35 L -10 -40 L -10 -30 L -5 -35 L -5 -25 L -10 -20 L -20 -20 Z"/>
+      <path d="M 20 -40 L 30 -45 L 30 -35 L 35 -40 L 35 -30 L 30 -25 L 20 -25 Z"/>
+      <path d="M 35 -35 L 45 -40 L 45 -30 L 50 -35 L 50 -25 L 45 -20 L 35 -20 Z"/>
+    </g>
+
+    <!-- Dip bowl -->
+    <g fill="url(#dipColor)">
+      <ellipse cx="-15" cy="15" rx="12" ry="8"/>
+      <ellipse cx="15" cy="15" rx="12" ry="8"/>
+    </g>
+
+    <!-- Onion ring texture -->
+    <g fill="#fb8c00">
+      <circle cx="-20" cy="12" r="3"/>
+      <circle cx="20" cy="12" r="3"/>
+    </g>
+  </g>
+
+  <!-- Highlight -->
+  <ellipse cx="200" cy="115" rx="95" ry="12" fill="#ffffff" opacity="0.15"/>
+</svg>

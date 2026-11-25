@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f0fdf4;">
+  <!-- Kurkure Masala Munch - UNCOMMON rarity -->
+  <defs>
+    <pattern id="cornSpeck" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#f5deb3" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - sage green tint for UNCOMMON -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Kurkure Bag -->
+  <g transform="translate(200, 150)">
+    <!-- Bag body with orange/yellow -->
+    <path d="M -110 -65 L -70 -85 L 70 -85 L 110 -65 L 90 0 L -90 0 Z" fill="#ff9800"/>
+
+    <!-- Bag top -->
+    <rect x="-90" y="-65" width="180" height="12" fill="#fff"/>
+    <rect x="-80" y="-62" width="160" height="6" fill="#ff9800" rx="2"/>
+
+    <!-- Kurkure logo band -->
+    <rect x="-75" y="-55" width="150" height="10" fill="#fff" rx="2"/>
+    <text x="0" y="-48" font-family="Playfair Display, serif" font-size="8" fill="#ff9800" text-anchor="middle" font-weight="600">KURKURE</text>
+    <text x="0" y="-38" font-family="JetBrains Mono, monospace" font-size="7" fill="#57534e" text-anchor="middle" font-weight="500">MASALA MUNCH</text>
+
+    <!-- Corn squares -->
+    <g fill="#f5deb3">
+      <rect x="-60" cy="-25" width="15" height="15" rx="2" transform="rotate(15)"/>
+      <rect x="-40" cy="-15" width="12" height="12" rx="2" transform="rotate(-10)"/>
+      <rect x="25" cy="-20" width="14" height="14" rx="2" transform="rotate(5)"/>
+      <rect x="45" cy="-30" width="13" height="13" rx="2"/>
+    </g>
+
+    <!-- Puffed texture -->
+    <g fill="#e8dcc9">
+      <ellipse cx="-30" cy="-5" rx="10" ry="6"/>
+      <ellipse cx="30" cy="0" rx="8" ry="5"/>
+    </g>
+
+    <!-- Masala spices -->
+    <g fill="#cd853f">
+      <circle cx="-70" cy="15" r="2"/>
+      <circle cx="55" cy="5" r="1.5"/>
+    </g>
+  </g>
+
+  <!-- Corn pattern overlay -->
+  <rect width="400" height="300" fill="url(#cornSpeck)" opacity="0.1"/>
+</svg>

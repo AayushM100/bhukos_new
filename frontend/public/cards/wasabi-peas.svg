@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #fff1f2;">
+  <!-- Wasabi Peas - RARE rarity -->
+  <defs>
+    <radialGradient id="peaGreen" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#8bc34a"/>
+      <stop offset="100%" stop-color="#4CAF50"/>
+    </radialGradient>
+    <linearGradient id="peaShadow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#388e3c"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+    <pattern id="peaDust" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#ff7043" opacity="0.3"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - soft pink tint for RARE -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Wasabi peas -->
+  <g transform="translate(200, 150)">
+    <!-- Container -->
+    <rect x="-85" y="-55" width="170" height="65" rx="6" fill="#e0f2f1" stroke="#00796b" stroke-width="2"/>
+
+    <!-- Container band -->
+    <rect x="-75" y="-58" width="150" height="8" fill="#009688"/>
+
+    <!-- Peas layer 1 (bottom) -->
+    <g fill="url(#peaGreen)">
+      <ellipse cx="-55" cy="-20" rx="20" ry="15" transform="rotate(-15)"/>
+      <ellipse cx="-30" cy="-10" rx="15" ry="12" transform="rotate(10)"/>
+      <ellipse cx="0" cy="-25" rx="18" ry="14" transform="rotate(-5)"/>
+      <ellipse cx="30" cy="-15" rx="15" ry="12" transform="rotate(5)"/>
+      <ellipse cx="55" cy="-25" rx="20" ry="15" transform="rotate(10)"/>
+    </g>
+
+    <!-- Peas layer 2 (top) -->
+    <g fill="url(#peaGreen)">
+      <ellipse cx="-45" cy="5" rx="12" ry="10"/>
+      <ellipse cx="-20" cy="0" rx="10" ry="8"/>
+      <ellipse cx="15" cy="0" rx="12" ry="10"/>
+      <ellipse cx="40" cy="5" rx="10" ry="8"/>
+      </g>
+
+    <!-- Shadows under peas -->
+    <g fill="url(#peaShadow)">
+      <ellipse cx="-55" cy="-10" rx="18" ry="8" opacity="0.3"/>
+      <ellipse cx="0" cy="0" rx="16" ry="7" opacity="0.3"/>
+      <ellipse cx="55" cy="0" rx="18" ry="8" opacity="0.3"/>
+    </g>
+
+    <!-- Green pea dust -->
+    <g fill="#8bc34a">
+      <circle cx="-70" cy="15" r="3"/>
+      <circle cx="60" cy="10" r="2"/>
+    </g>
+
+    <!-- Wasabi root garnish -->
+    <g fill="#5D4037">
+      <path d="M 180 180 C 175 160 185 145 195 155 C 205 145 215 160 210 180 Z"/>
+      <path d="M 200 120 C 195 110 205 100 212 110 C 218 100 228 110 223 120 C 218 130 208 135 200 125 Z"/>
+    </g>
+    <fill="#81C784">
+      <path d="M 195 125 C 192 118 200 112 208 118 C 215 112 225 118 220 125 C 215 132 205 138 195 130 Z"/>
+    </g>
+  </g>
+
+  <!-- Spice pattern overlay -->
+  <rect width="400" height="300" fill="url(#peaDust)" opacity="0.1"/>
+</svg>

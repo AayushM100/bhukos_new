@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background: #f9f6ee;">
+  <!-- Lay's Classic Salted - COMMON rarity -->
+  <defs>
+    <pattern id="saltPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+      <circle cx="2" cy="2" r="1" fill="#f5f5dc" opacity="0.4"/>
+    </pattern>
+  </defs>
+
+  <!-- Background - creamy parchment -->
+  <rect width="400" height="300" fill="#fff8f5"/>
+
+  <!-- Lay's Chip Bag -->
+  <g transform="translate(200, 150)">
+    <!-- Bag body with classic red and white -->
+    <path d="M -110 -65 L -70 -85 L 70 -85 L 110 -65 L 90 0 L -90 0 Z" fill="#d32f2f"/>
+
+    <!-- Bag top with white stripe -->
+    <rect x="-90" y="-65" width="180" height="12" fill="#fff"/>
+    <rect x="-80" y="-62" width="160" height="6" fill="#d32f2f" rx="2"/>
+
+    <!-- Lay's logo band -->
+    <rect x="-75" y="-55" width="150" height="10" fill="#fff" rx="2"/>
+    <text x="0" y="-48" font-family="Playfair Display, serif" font-size="8" fill="#d32f2f" text-anchor="middle" font-weight="600">LAY'S</text>
+    <text x="0" y="-38" font-family="JetBrains Mono, monospace" font-size="7" fill="#57534e" text-anchor="middle" font-weight="500">CLASSIC SALTED</text>
+
+    <!-- Stack of chips -->
+    <g fill="#d2b48c">
+      <path d="M -50 -25 Q -45 -15 -40 -25 L -40 -10 L -30 0 L -20 -10 L -20 10 L -10 0 L 0 -10 L 0 10 L 10 0 L 15 -10 L 25 0 L 35 -10 L 40 0" stroke="#e0c097" stroke-width="1" fill="none"/>
+      <path d="M -45 -20 Q -40 -10 -35 -20 L -35 -5 L -25 5 L -15 -5 L -15 15 L -5 5 L 5 -5 L 15 0 L 20 -5 L 30 0 L 35 -5 L 40 0" stroke="#e0c097" stroke-width="1" fill="none"/>
+    </g>
+
+    <!-- Salt crystals -->
+    <g fill="#f5f5dc">
+      <circle cx="-70" cy="-20" r="2"/>
+      <circle cx="60" cy="-15" r="1.5"/>
+      <circle cx="40" cy="-30" r="1.5"/>
+    </g>
+  </g>
+
+  <!-- Salt pattern overlay -->
+  <rect width="400" height="300" fill="url(#saltPattern)" opacity="0.08"/>
+</svg>
