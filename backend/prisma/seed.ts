@@ -145,7 +145,7 @@ const seedData: SeedFoodCard[] = [
     slug: 'haldirams-aloo-bhujia',
     category: 'SNACK',
     flavors: ['SPICY', 'SAVORY'],
-    artworkUrl: '/cards/haldimgam-aloo-bhujia.svg',
+    artworkUrl: '/cards/haldirams-aloo-bhujia.svg',
     funQuote: 'Crisp, golden savory noodles that define Indian street snack excellence - the original bhujia.',
     rarity: 'LEGENDARY',
     avgRating: 4.7,
@@ -171,7 +171,7 @@ async function main() {
 main()
   .catch((e) => {
     console.error('Seed failed:', e);
-    process.exit(1);
+    throw e;
   })
   .finally(async () => {
     await prisma.$disconnect();
