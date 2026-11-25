@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { GoogleLogin } from '@react-oauth/google';
 import { useAuth } from '../providers/AuthProvider';
 import { X } from 'lucide-react';
@@ -11,6 +11,7 @@ interface GoogleOAuthModalProps {
 export const GoogleOAuthModal: React.FC<GoogleOAuthModalProps> = ({ isOpen, onClose }) => {
   const { signIn } = useAuth();
   const modalRef = useRef<HTMLDivElement>(null);
+  const [errorMessage, setErrorMessage] = useState<string | null>(null);
 
   // Handle escape key to close modal
   useEffect(() => {
@@ -47,6 +48,13 @@ export const GoogleOAuthModal: React.FC<GoogleOAuthModalProps> = ({ isOpen, onCl
       document.body.style.overflow = 'unset';
     };
   }, [isOpen, onClose]);
+
+  // Clear error message when modal closes
+  useEffect(() => {
+    if (!isOpen) {
+      setErrorMessage(null);
+    }
+  }, [isOpen]);
 
   if (!isOpen) return null;
 
@@ -85,17 +93,25 @@ export const GoogleOAuthModal: React.FC<GoogleOAuthModalProps> = ({ isOpen, onCl
                   await signIn(credentialResponse.credential);
                   onClose();
                 } catch (error) {
-                  console.error('Google sign-in failed:', error);
+                  const msg = error instanceof Error ? error.message : 'Sign in failed';
+                  setErrorMessage(msg);
                 }
               }
             }}
             onError={() => {
-              console.error('Google Login Failed');
+              setErrorMessage('Google authentication failed. Please try again.');
             }}
             size="large"
             theme="outline"
             shape="rectangular"
           />
+
+          {/* Error message */}
+          {errorMessage && (
+            <div className="mt-4 p-3 bg-error-container rounded-none border border-error">
+              <p className="text-sm text-on-error">{errorMessage}</p>
+            </div>
+          )}
 
           {/* Security subtext - from design.md */}
           <p className="text-xs text-on-surface-variant mt-4 px-4">

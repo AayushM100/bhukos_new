@@ -11,7 +11,7 @@ export async function googleAuthHandler(request: FastifyRequest, reply: FastifyR
     const googleUser = await verifyGoogleToken(body.idToken);
     const authPayload = await upsertUser(googleUser);
 
-    const token = await request.server.jwtSign(authPayload);
+    const token = await reply.jwtSign(authPayload);
 
     reply.setCookie('bhukos_session', token, {
       httpOnly: true,

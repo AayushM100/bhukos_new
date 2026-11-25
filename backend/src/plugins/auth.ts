@@ -17,7 +17,8 @@ declare module '@fastify/jwt' {
     user: AuthPayload;
   }
 
-  interface Fastifyjwt {
+  // Extend the types from @fastify/jwt
+  interface FastifyReply {
     jwtSign: (payload: AuthPayload, options?: any) => Promise<string>;
   }
 }
@@ -44,6 +45,11 @@ export const authPlugin = fp(async (fastify: FastifyInstance) => {
       signed: false,
     },
     formatUser: (payload) => payload as AuthPayload,
+  });
+
+  // Decorate jwtSign method for signing tokens - available on request via @fastify/jwt
+  fastify.decorate('jwtSign', async (payload: AuthPayload, options?: any) => {
+    return fastify.jwt.sign(payload, options);
   });
 
   // Verify JWT from cookie and populate request.user

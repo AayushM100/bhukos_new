@@ -1,10 +1,10 @@
 import React from 'react';
 import { FunFactCard } from './FunFactCard';
 import { useAuthGate } from '../hooks/useAuthGate';
-import { Heart, Star, Package, Users, List, Calendar, User } from 'lucide-react';
+import { Heart, Star, Package, Users, List, Calendar, User, LogOut } from 'lucide-react';
 
 export const LandingPage: React.FC = () => {
-  const { user, requireAuth } = useAuthGate();
+  const { user, requireAuth, signOut } = useAuthGate();
 
   // Navigation items - bhukos-specific labels per design.md
   const navItems = [
@@ -87,16 +87,36 @@ export const LandingPage: React.FC = () => {
                 >
                   Profile
                 </button>
+                {/* User info and Sign Out */}
+                <div className="flex items-center gap-2">
+                  {user.avatarUrl && (
+                    <img
+                      src={user.avatarUrl}
+                      alt={user.displayName || user.username}
+                      className="w-8 h-8 rounded-full"
+                    />
+                  )}
+                  <span className="text-sm text-on-surface">{user.displayName || user.username}</span>
+                  <button
+                    onClick={signOut}
+                    className="text-sm text-on-surfaceVariant hover:text-primary transition-colors p-1"
+                    aria-label="Sign Out"
+                  >
+                    <LogOut size={16} />
+                  </button>
+                </div>
               </nav>
             )}
 
-            {/* Sign In Button */}
-            <button
-              onClick={handleSignInClick}
-              className="px-4 py-2 text-sm font-medium text-on-surface bg-primary hover:bg-primary/90 transition-colors rounded-none"
-            >
-              Sign In
-            </button>
+            {/* Sign In Button - only show when not authenticated */}
+            {!user && (
+              <button
+                onClick={handleSignInClick}
+                className="px-4 py-2 text-sm font-medium text-on-surface bg-primary hover:bg-primary/90 transition-colors rounded-none"
+              >
+                Sign In
+              </button>
+            )}
           </div>
         </div>
       </header>

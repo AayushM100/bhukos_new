@@ -12,10 +12,12 @@ export interface AuthGateResult {
   isLoading: boolean;
   /** Current user object or null */
   user: User | null;
+  /** Sign out the current user */
+  signOut: () => Promise<void>;
 }
 
 export const useAuthGate = (): AuthGateResult => {
-  const { user, isLoading, isAuthenticated } = useAuth();
+  const { user, isLoading, isAuthenticated, signOut } = useAuth();
   const { open } = useAuthModal();
 
   const requireAuth = () => {
@@ -38,5 +40,6 @@ export const useAuthGate = (): AuthGateResult => {
     isAuthenticated,
     isLoading,
     user,
+    signOut,
   };
 };
