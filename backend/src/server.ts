@@ -10,8 +10,13 @@ const start = async () => {
     await prisma.$connect();
 
     // Initialize facts on startup - check if today's fact exists, sync if missing
-    await syncTodaysFact();
-    app.log.info('Daily fun fact initialized');
+    // Wrap in try/catch so a Wikipedia fetch error logs a warning instead of crashing the server
+    try {
+      await syncTodaysFact();
+      app.log.info('Daily fun fact initialized');
+    } catch (err) {
+      app.log.warn({ err }, 'Failed to sync daily Wikipedia fact on startup - continuing');
+    }
 
     // Schedule daily Wikipedia sync at 00:05 UTC
     cron.schedule('5 0 * * *', async () => {

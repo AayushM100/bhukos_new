@@ -58,17 +58,20 @@ export const FunFactCard: React.FC = () => {
         </div>
       </div>
 
-      {/* Title - serif display font */}
-      <h3 className="text-xl font-display font-medium text-on-surface mb-3">
+      {/* Hairline divider */}
+      <div className="border-t hairline mb-4"></div>
+
+      {/* Title - serif display font for editorial headline */}
+      <h3 className="text-xl font-display font-medium text-on-surface mb-4">
         {data.title}
       </h3>
 
-      {/* Summary - body font */}
+      {/* Summary - body font, editorial style */}
       <p className="text-on-surface-variant leading-relaxed mb-4">
         {data.summary}
       </p>
 
-      {/* Wikipedia link - from design.md carousel/rotation indicators pattern */}
+      {/* Wikipedia link - from design.md */}
       {data.wikipediaUrl && (
         <a
           href={data.wikipediaUrl}

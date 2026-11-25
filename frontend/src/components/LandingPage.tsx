@@ -1,7 +1,7 @@
 import React from 'react';
 import { FunFactCard } from './FunFactCard';
 import { useAuthGate } from '../hooks/useAuthGate';
-import { Heart, List, Users, Star, BarChart3, User } from 'lucide-react';
+import { Heart, Star, Package, Users, List, Calendar, User } from 'lucide-react';
 
 export const LandingPage: React.FC = () => {
   const { user, requireAuth } = useAuthGate();
@@ -10,9 +10,10 @@ export const LandingPage: React.FC = () => {
   const navItems = [
     { label: 'Log', icon: Heart, description: 'Record what you ate' },
     { label: 'Wishlist', icon: Star, description: 'Save for later' },
-    { label: 'My Collection', icon: BarChart3, description: 'Your cards' },
+    { label: 'My Collection', icon: Package, description: 'Your cards' },
     { label: 'Friends', icon: Users, description: 'Connect' },
     { label: 'Lists', icon: List, description: 'Curated lists' },
+    { label: 'Facts', icon: Calendar, description: 'Daily food history' },
     { label: 'Profile', icon: User, description: 'Your profile' },
   ];
 
@@ -26,31 +27,76 @@ export const LandingPage: React.FC = () => {
     // Future: Implement actual navigation
   };
 
+  const handleSignInClick = () => {
+    requireAuth();
+  };
+
   return (
     <div className="min-h-screen bg-surface text-onSurface flex flex-col">
-      {/* Header with user state */}
+      {/* Top Navigation Bar - Letterboxd-inspired/editorial style */}
       <header className="border-b hairline bg-surface-container-low">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex justify-between items-center">
-            <h1 className="text-2xl font-display font-medium text-on-surface">Bhukos</h1>
-            {user ? (
-              <div className="flex items-center gap-3">
-                <span className="text-sm text-on-surface-variant hidden sm:block">
-                  Welcome, {user.displayName || user.username}
-                </span>
-                {user.avatarUrl && (
-                  <img
-                    src={user.avatarUrl}
-                    alt={user.displayName || user.username}
-                    className="w-8 h-8 rounded-none border border-stone-300"
-                  />
-                )}
-              </div>
-            ) : (
-              <div className="text-sm text-on-surface-variant">
-                Sign in to log food and collect cards
-              </div>
+            {/* Bhukos Brand */}
+            <a href="#" className="text-2xl font-display font-medium text-on-surface hover:text-primary transition-colors">
+              Bhukos
+            </a>
+
+            {/* Nav Items - show when authenticated */}
+            {user && (
+              <nav className="hidden md:flex items-center space-x-6">
+                <button
+                  onClick={handleNavClick('Log')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Log
+                </button>
+                <button
+                  onClick={handleNavClick('Wishlist')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Wishlist
+                </button>
+                <button
+                  onClick={handleNavClick('My Collection')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  My Collection
+                </button>
+                <button
+                  onClick={handleNavClick('Friends')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Friends
+                </button>
+                <button
+                  onClick={handleNavClick('Lists')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Lists
+                </button>
+                <button
+                  onClick={handleNavClick('Facts')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Facts
+                </button>
+                <button
+                  onClick={handleNavClick('Profile')}
+                  className="text-sm text-on-surfaceVariant hover:text-primary transition-colors"
+                >
+                  Profile
+                </button>
+              </nav>
             )}
+
+            {/* Sign In Button */}
+            <button
+              onClick={handleSignInClick}
+              className="px-4 py-2 text-sm font-medium text-on-surface bg-primary hover:bg-primary/90 transition-colors rounded-none"
+            >
+              Sign In
+            </button>
           </div>
         </div>
       </header>
@@ -68,38 +114,40 @@ export const LandingPage: React.FC = () => {
               Log your meals, collect aesthetic cards, share favorite snacks, and discover daily food history.
             </p>
 
+            {/* Hero CTA - clean button instead of generic box */}
             {!user && (
-              <div className="bg-surface-container-low border hairline rounded-none p-6 inline-block">
-                <p className="text-sm text-on-surface-variant mb-4">
-                  Sign in with Google to start enjoying all features.
-                </p>
-              </div>
+              <button
+                onClick={handleSignInClick}
+                className="px-6 py-3 text-base font-medium text-white bg-primary hover:bg-primary/90 transition-colors rounded-none"
+              >
+                Start Logging Food
+              </button>
             )}
           </div>
         </section>
 
-        {/* Today's FunFact - prominent display per design.md */}
+        {/* FunFacts for Foodies Section - editorial newspaper/journal layout */}
         <section className="mb-16">
           <h3 className="text-xl font-display font-medium text-on-surface mb-6">
-            Daily Food Fact
+            FunFacts for Foodies
           </h3>
           <FunFactCard />
         </section>
 
-        {/* Navigation Grid - editorial style */}
+        {/* Editorial navigation pattern - clean, not boxed grid */}
         <section>
           <h3 className="text-xl font-display font-medium text-on-surface mb-8">
             Explore
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="space-y-3">
             {navItems.map((item) => {
               const Icon = item.icon;
               return (
                 <div
                   key={item.label}
                   onClick={handleNavClick(item.label)}
-                  className="border hairline rounded-none p-4 cursor-pointer hover:shadow-md transition-shadow"
+                  className="border hairline rounded-none p-4 cursor-pointer hover:opacity-80 transition-opacity"
                 >
                   <div className="flex items-center gap-3">
                     <Icon size={20} className="text-primary" />

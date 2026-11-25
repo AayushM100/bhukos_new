@@ -27,16 +27,21 @@ describe('Facts Module', () => {
   });
 
   describe('GET /api/v1/facts/today', () => {
-    it('should return 401 for unauthenticated user requesting protected endpoint', async () => {
-      // /api/v1/facts/today is public, but it requires DB access
-      // When DB is unavailable, it returns 500
+    it('should return 200 for public endpoint with valid fact', async () => {
+      // /api/v1/facts/today is a public endpoint
       const response = await testApp.inject({
         method: 'GET',
         url: '/api/v1/facts/today',
       });
 
-      // Since DB table doesn't exist, we expect 500 (or should handle gracefully)
-      expect(response.statusCode).toBeGreaterThanOrEqual(400);
+      // Should return 200 with fact data when DB is available
+      expect(response.statusCode).toBe(200);
+
+      const body = JSON.parse(response.body);
+      expect(body).toHaveProperty('factDate');
+      expect(body).toHaveProperty('title');
+      expect(body).toHaveProperty('summary');
+      expect(body).toHaveProperty('wikipediaUrl');
     });
   });
 });

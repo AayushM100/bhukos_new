@@ -7,7 +7,11 @@ interface WikipediaSummaryResponse {
   thumbnail?: {
     source: string;
   }
-  page_url: string;
+  content_urls?: {
+    desktop: {
+      page: string;
+    };
+  };
 }
 
 const FOOD_TOPICS = [
@@ -42,7 +46,7 @@ export async function fetchWikipediaSummary(topic: string): Promise<WikipediaSum
       title: data.title,
       extract: data.extract,
       thumbnail: data.thumbnail,
-      page_url: data.page_url,
+      content_urls: data.content_urls,
     };
   } catch (error) {
     console.error('Failed to fetch Wikipedia summary:', error);
@@ -78,18 +82,19 @@ export async function syncTodaysFact(): Promise<void> {
     factData = {
       title: 'Food History Fact',
       extract: 'Unable to fetch today\'s Wikipedia fact due to network issues. Please try again later!',
-      page_url: 'https://en.wikipedia.org/wiki/Food_history',
+      content_urls: { desktop: { page: 'https://en.wikipedia.org/wiki/Food_history' } },
     };
   }
 
   const imageUrl = factData.thumbnail?.source ?? null;
+  const wikipediaUrl = factData.content_urls?.desktop?.page ?? 'https://en.wikipedia.org/wiki/Food_history';
 
   await prisma.dailyFunFact.create({
     data: {
       factDate: today,
       title: factData.title,
       summary: factData.extract,
-      wikipediaUrl: factData.page_url,
+      wikipediaUrl,
       imageUrl,
     },
   });
